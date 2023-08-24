@@ -1,0 +1,17 @@
+.homepage {
+    background-image: linear-gradient(rgba(0, 255, 0, 0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 255, 0, 0.15) 1px, transparent 1px);
+    background-size: 6rem 6rem
+}
+
+@media (min-width: 768px) {
+    .homepage {
+        background-size: 12rem 12rem
+    }
+}
+
+@media (min-width: 1800px) {
+    .homepage {
+        background-image: linear-gradient(rgba(0, 255, 0, 0.15) 3px, transparent 3px), linear-gradient(90deg, rgba(0, 255, 0, 0.15) 3px, transparent 3px);
+        background-size: 18rem 18rem
+    }
+}

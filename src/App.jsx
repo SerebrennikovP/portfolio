@@ -1,9 +1,18 @@
-import React from 'react'
+import './CSS/app.css';
+import React from 'react';
+import Homepage from './pages/Homepage';
+import PageContext from './context/PageContext';
 
-const App = () => {
-  return (
-    <div>Pavel Serebrennikov</div>
-  )
+function App() {
+
+
+    return (
+        <PageContext>
+            <div className="App">
+                <Homepage />
+            </div>
+        </PageContext>
+    );
 }
 
-export default App
+export default App;
