@@ -2,12 +2,16 @@ import React, { useState, useEffect } from "react";
 import Circle1 from "./Circle1";
 import debounce from "lodash.debounce";
 import { usePageContext } from '../context/PageContext'
+import Circle2 from "./Circle2";
+import Circle3 from "./Circle3";
+import Circle4 from "./Circle4";
+import Circle5 from "./Circle5";
 
 const Circle = () => {
     const { marker, setMarker } = usePageContext()
     const [startX, setStartX] = useState(null);
     const [startY, setStartY] = useState(null);
-    useEffect(() => console.log(marker), [marker])
+
     const nextMarker = () => setMarker((prev) => Math.min(prev + 1, 5));
     const prevMarker = () => setMarker((prev) => Math.max(prev - 1, 1));
 
@@ -79,17 +83,29 @@ const Circle = () => {
 
     return (
         <>
-            <div className="w-full flex   justify-center items-center mt-[75vh] sm:mt-[100vh]">
+            <div className="w-full flex   justify-center items-center tall:mt-[75vh] mt-[75vh] sm:mt-[100vh]">
                 <div className="absolute  m-0">
                     <div
-                        className="w-[80vw] sm:w-[55vw] h-[80vw] sm:h-[55vw] wide:h-[100vh] wide:w-[100vh] border-2 border-[#ffffff40] rounded-full relative transition-all ease-in-out duration-700"
+                        className={`tall:w-[80vw] tall:h-[80vw] w-[80vw] h-[80vw] sm:w-[55vw]  sm:h-[55vw] wide:h-[100vh] wide:w-[100vh] border-2 ${marker >= 4 ? 'border-[#00000060]' : 'border-[#ffffff40]'} rounded-full relative transition-all ease-in-out duration-700`}
                         style={circleStyle}
                     >
-                        <div className="w-3 h-3 sm:w-5 sm:h-5 bg-zinc-200  rounded-full absolute top-[-6px] sm:top-[-10px] left-1/2 transform translate-x-[-50%]"></div>
+                        <div className={`w-3 h-3 sm:w-5 sm:h-5 ${marker >= 4 ? 'bg-zinc-800' : 'bg-zinc-200'}   rounded-full absolute top-[-6px] sm:top-[-10px] left-1/2 transform translate-x-[-50%]`}></div>
                     </div>
                 </div>
-                <div className="absolute">
+                <div className={`absolute ${marker===1?'z-[200]':''}`}>
                     <Circle1 />
+                </div>
+                <div className={`absolute ${marker===2?'z-[200]':''}`}>
+                    <Circle2 />
+                </div>
+                <div className={`absolute ${marker===3?'z-[200]':''}`}>
+                    <Circle3 />
+                </div>
+                <div className={`absolute ${marker===4?'z-[200]':''}`}>
+                    <Circle4 />
+                </div>
+                <div className={`absolute ${marker===5?'z-[200]':''}`}>
+                    <Circle5 />
                 </div>
             </div>
         </>

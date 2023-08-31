@@ -1,17 +1,82 @@
-.homepage {
-    background-image: linear-gradient(rgba(0, 255, 0, 0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 255, 0, 0.15) 1px, transparent 1px);
-    background-size: 6rem 6rem
+/* HELLO SECTION */
+.hello-section {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+  background-size: 100% 100%;
+  background-color: rgba(0, 0, 0, 0);
 }
 
+/* ABOUT SECCTION */
+.about-section {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+  background-size: 6rem 6rem;
+  background-color: #930049;
+}
 @media (min-width: 768px) {
-    .homepage {
-        background-size: 12rem 12rem
-    }
+  .about-section {
+    background-size: 12rem 12rem;
+  }
 }
 
 @media (min-width: 1800px) {
-    .homepage {
-        background-image: linear-gradient(rgba(0, 255, 0, 0.15) 3px, transparent 3px), linear-gradient(90deg, rgba(0, 255, 0, 0.15) 3px, transparent 3px);
-        background-size: 18rem 18rem
-    }
+  .about-section {
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.15) 3px,
+        transparent 3px
+      ),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.15) 3px, transparent 3px);
+    background-size: 18rem 18rem;
+  }
+}
+
+
+/* PROJECTS SECTION */
+.projects-section {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px),
+  linear-gradient(90deg, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+background-size: 100% 100%;
+background-color: #000
+}
+
+@keyframes rotateAnimation {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+.rotate-container {
+  animation: rotateAnimation 20s infinite linear;
+}
+.rotate-container:hover {
+  filter: invert();
+}
+
+/* SKILLS SECTION */
+.skills-section {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px),
+  linear-gradient(90deg, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+background-size: 100% 100%;
+background-color: #fff
+}
+
+/* CONTACT SECTION */
+.contact-section {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px),
+  linear-gradient(90deg, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+background-size: 100% 100%;
+background-color: #FFD900
+}
+
+
+.rotate-container-contact {
+  animation: rotateAnimation 60s infinite linear;
+}
+
+.rotate-container-contact:hover{
+  fill:#fff;
+  cursor:default
 }
