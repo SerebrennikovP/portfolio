@@ -89,7 +89,7 @@ const Circle = () => {
 
   return (
     <>
-      <div className="w-full flex   justify-center items-center tall:mt-[75vh] mt-[75vh] sm:mt-[100vh]">
+      <div className="w-full flex  overflow-hidden justify-center items-center tall:mt-[75vh] mt-[75vh] sm:mt-[100vh]">
         <div className="absolute  m-0">
           <div
             className={`z-[150] text-[2px] -mt-[17vw] -mt-[17vw]  w-[114vw] h-[114vw] sm:w-[60vw] sm:h-[60vw] sm:-ms-[9vw] sm:-mt-[9vw] tall:w-[114vw] tall:h-[114vw] tall:-mt-[17vw] tall:-ms-[17vw] wide:w-[117vh] wide:h-[117vh] wide:-mt-[17vh] wide:-ms-[17vh]   rounded-full absolute `}
@@ -121,7 +121,7 @@ const Circle = () => {
                     }`}
                     onClick={() => setMarker(1)}
                   >
-                    HELLO
+                    HeLLO
                   </tspan>
                   <tspan className="cursor-default">
                   {createEmptySpaces(30)}
