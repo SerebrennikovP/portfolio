@@ -32,7 +32,7 @@ const Circle = () => {
         if (!startX) return;
         const deltaX = event.touches[0].clientX - startX;
         console.log(deltaX);
-        if (Math.abs(deltaX) > 30) {
+        if (Math.abs(deltaX) > 10) {
             if (deltaX > 0) {
                 nextMarker();
             } else {
