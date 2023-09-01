@@ -32,10 +32,11 @@ const Circle5 = () => {
                 className={`${marker === 5
                         ? "opacity-100 rotate-[0deg] "
                         : "opacity-[0%]  rotate-[-540deg]"
-                    } tall:h-[65vw] tall:w-[65vw] h-[65vw] w-[65vw]  sm:h-[45vw] sm:w-[45vw] wide:h-[87vh] wide:w-[87vh] bg-red-600 rounded-full overflow-hidden relative flex flex-col justify-center  transition-all  ease-in-out duration-700`}
+                    } tall:h-[70vw] tall:w-[70vw] h-[70vw] w-[70vw]  sm:h-[37vw] sm:w-[37vw] wide:h-[73vh] wide:w-[73vh] bg-red-600 rounded-full overflow-hidden relative flex flex-col justify-center  transition-all   ease-in-out duration-700`}
+                    style={{ clipPath: 'circle(50% at center)' }}
             >
                 <svg
-                    className="rotate-container-contact text-xs tracking-[.09em] absolute z-[100] font-['Orbitron']"
+                    className="unselectable rounded-svg rotate-container-contact hover:fill-white cursor-default text-xs tracking-[.09em] absolute z-[100] font-['Orbitron'] rounded-full"
                     viewBox="0 0 100 100"
                     width="100%"
                     height="100%"
@@ -56,6 +57,7 @@ const Circle5 = () => {
                     <text>
                         <textPath
                             href="#circle"
+                            className="rotate-container-contact "
                         >
                             CONTACT ME | CONTACT ME | CONTACT ME | CONTACT ME | CONTACT ME | CONTACT ME | CONTACT ME | CONTACT ME | CONTACT ME | CONTACT ME | CONTACT ME | CONTACT ME |
                         </textPath>

@@ -1,3 +1,13 @@
+.unselectable {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
+
 /* HELLO SECTION */
 .hello-section {
     background-image: linear-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px),
@@ -60,7 +70,7 @@ background-color: #000
   background-image: linear-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px),
   linear-gradient(90deg, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
 background-size: 100% 100%;
-background-color: #fff
+background-color: #f0f0f0
 }
 
 /* CONTACT SECTION */
@@ -74,9 +84,4 @@ background-color: #FFD900
 
 .rotate-container-contact {
   animation: rotateAnimation 60s infinite linear;
-}
-
-.rotate-container-contact:hover{
-  fill:#fff;
-  cursor:default
 }
