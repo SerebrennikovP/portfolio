@@ -121,7 +121,7 @@ const Circle = () => {
                     }`}
                     onClick={() => setMarker(1)}
                   >
-                    HeLLO
+                    HElLO
                   </tspan>
                   <tspan className="cursor-default">
                   {createEmptySpaces(30)}
