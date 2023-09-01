@@ -8,7 +8,7 @@ const Homepage = () => {
   const { marker, setMarker } = usePageContext();
 
   return (<>
-    <video className={`${marker === 1 ? 'opacity-100' : 'opacity-0'} transition-all ease-in-out duration-700 absolute overflow-hidden w-full h-full object-cover blur-[2px]`} autoPlay muted loop>
+    <video className={`${marker === 1 ? 'opacity-100' : 'opacity-0'} transition-all ease-in-out duration-700 absolute w-[100vw] h-[100vh] object-cover blur-[2px]`} autoPlay muted loop>
       <source src={bg_1} type="video/mp4" />
     </video>
     <div
