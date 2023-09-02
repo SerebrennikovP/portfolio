@@ -11,7 +11,6 @@ import { useSwipeable } from 'react-swipeable';
 
 const Circle = () => {
     const { marker, setMarker } = usePageContext();
-    // const [startX, setStartX] = useState(null);
 
     const nextMarker = () => setMarker((prev) => Math.min(prev + 1, 5));
     const prevMarker = () => setMarker((prev) => Math.max(prev - 1, 1));
@@ -25,28 +24,11 @@ const Circle = () => {
         }
     };
 
-    // const handleTouchStart = (event) => {
-    //     setStartX(event.touches[0].clientX);
-    // };
-
-    // const handleTouchMove = (event) => {
-    //     if (!startX) return;
-    //     const deltaX = event.touches[0].clientX - startX;
-    //     console.log(deltaX);
-    //     if (Math.abs(deltaX) > 10) {
-    //         if (deltaX > 0) {
-    //             nextMarker();
-    //         } else {
-    //             prevMarker();
-    //         }
-    //     }
-
-    //     setStartX(null);
-    // };
-
     const handlers = useSwipeable({
         onSwipedRight: () => nextMarker(),
         onSwipedLeft:() => prevMarker(),
+        delta: 40, 
+        preventScrollOnSwipe: true,
       });
 
     const debouncedHandleScroll = debounce(handleScroll, 300, {
@@ -68,14 +50,10 @@ const Circle = () => {
 
     useEffect(() => {
         window.addEventListener("wheel", debouncedHandleScroll);
-        // window.addEventListener("touchstart", handleTouchStart);
-        // window.addEventListener("touchmove", handleTouchMove);
         window.addEventListener("keyup", handleKeyUp);
         return () => {
             window.removeEventListener("wheel", debouncedHandleScroll);
             debouncedHandleScroll.cancel();
-            // window.removeEventListener("touchstart", handleTouchStart);
-            // window.removeEventListener("touchmove", handleTouchMove);
             window.removeEventListener("keyup", handleKeyUp);
         };
     }, []);
@@ -85,7 +63,7 @@ const Circle = () => {
     };
 
     return (
-        <div {...handlers}>
+        <div {...handlers} className="w-full absolute">
 
             <div className="w-full flex   justify-center items-center tall:mt-[75vh] mt-[75vh] sm:mt-[100vh]">
                 <div className="absolute  m-0">

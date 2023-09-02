@@ -66,24 +66,24 @@ const Circle5 = () => {
 
                 <ImStarFull
                     className={`${count === 1 || count === 2 ? "scale-[120]" : "scale-[0] "
-                        } z-[30] text-[1vw] tall:text-[1vh] wide:text-[2vh] transition-transform  ease-in-out duration-1000 text-blue-500 place-self-center`}
+                        } z-[30] text-[1.5vh] tall:text-[1.5vh] wide:text-[3vh] transition-transform  ease-in-out duration-1000 text-blue-500 place-self-center tall:-ms-[1.5vw] tall:-mt-[1vw]`}
                 />
                 <FaSquareFull
                     className={`${count === 2 || count === 3 ? "scale-[50]" : "scale-[0] "
-                        } text-[1vw] z-[40] tall:text-[1vh] wide:text-[2vh] transition-transform  ease-in-out duration-1000 text-pink-500 place-self-center`}
+                        } z-[40] text-[1.5vh] tall:text-[1.5vh] wide:text-[3vh] transition-transform ease-in-out duration-1000 text-pink-500 place-self-center tall:-ms-[1.5vw] tall:-mt-[1vw]`}
                 />
                 <IoTriangleSharp
                     className={`${count === 3 || count === 4 ? "scale-[125]" : "scale-[0] "
-                        } text-[1vw] z-[50] tall:text-[1vh] wide:text-[2vh] transition-transform  ease-in-out duration-1000 text-green-500 place-self-center`}
+                        } z-[50] text-[1.5vh] tall:text-[1.5vh] wide:text-[3vh] transition-transform  ease-in-out duration-1000 text-green-500 place-self-center tall:-ms-[1.5vw] tall:-mt-[1vw]`}
                 />
                 <FaCircle
                     className={`${count === 4 || count === 1 ? "scale-[55] " : "scale-[0]"
                         } ${!hideCircle ? "hidden" : ""
-                        } z-[60] text-[1vw] tall:text-[1vh] wide:text-[2vh] transition-transform  ease-in-out duration-1000 text-fuchsia-600 place-self-center`}
+                        } z-[60] text-[1.5vh] tall:text-[1.5vh] wide:text-[3vh] transition-transform  ease-in-out duration-1000 text-fuchsia-600 place-self-center tall:-ms-[1.5vw] tall:-mt-[1vw]`}
                 />
                 <ImStarFull
                     className={`${count === 1 ? "scale-[120]" : "scale-[0] "} z-[70] ${count === 2 ? "hidden" : ""
-                        } text-[1vw] tall:text-[1vh] wide:text-[2vh] transition-transform  ease-in-out duration-1000 text-blue-500 place-self-center`}
+                        } text-[1.5vh] tall:text-[1.5vh] wide:text-[3vh] transition-transform  ease-in-out duration-1000 text-blue-500 place-self-center tall:-ms-[1.5vw] tall:-mt-[1vw]`}
                 />
             </div>
         </>
