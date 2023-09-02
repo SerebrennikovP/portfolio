@@ -7,10 +7,11 @@ import Circle3 from "./Circle3";
 import Circle4 from "./Circle4";
 import Circle5 from "./Circle5";
 import "../CSS/homepage.css";
+import { useSwipeable } from 'react-swipeable';
 
 const Circle = () => {
     const { marker, setMarker } = usePageContext();
-    const [startX, setStartX] = useState(null);
+    // const [startX, setStartX] = useState(null);
 
     const nextMarker = () => setMarker((prev) => Math.min(prev + 1, 5));
     const prevMarker = () => setMarker((prev) => Math.max(prev - 1, 1));
@@ -24,24 +25,30 @@ const Circle = () => {
         }
     };
 
-    const handleTouchStart = (event) => {
-        setStartX(event.touches[0].clientX);
-    };
+    // const handleTouchStart = (event) => {
+    //     setStartX(event.touches[0].clientX);
+    // };
 
-    const handleTouchMove = (event) => {
-        if (!startX) return;
-        const deltaX = event.touches[0].clientX - startX;
-        console.log(deltaX);
-        if (Math.abs(deltaX) > 10) {
-            if (deltaX > 0) {
-                nextMarker();
-            } else {
-                prevMarker();
-            }
-        }
+    // const handleTouchMove = (event) => {
+    //     if (!startX) return;
+    //     const deltaX = event.touches[0].clientX - startX;
+    //     console.log(deltaX);
+    //     if (Math.abs(deltaX) > 10) {
+    //         if (deltaX > 0) {
+    //             nextMarker();
+    //         } else {
+    //             prevMarker();
+    //         }
+    //     }
 
-        setStartX(null);
-    };
+    //     setStartX(null);
+    // };
+
+    const handlers = useSwipeable({
+        onSwipedRight: () => nextMarker(),
+        onSwipedLeft:() => prevMarker(),
+      });
+
     const debouncedHandleScroll = debounce(handleScroll, 300, {
         leading: true,
         trailing: false,
@@ -61,28 +68,29 @@ const Circle = () => {
 
     useEffect(() => {
         window.addEventListener("wheel", debouncedHandleScroll);
-        window.addEventListener("touchstart", handleTouchStart);
-        window.addEventListener("touchmove", handleTouchMove);
+        // window.addEventListener("touchstart", handleTouchStart);
+        // window.addEventListener("touchmove", handleTouchMove);
         window.addEventListener("keyup", handleKeyUp);
         return () => {
             window.removeEventListener("wheel", debouncedHandleScroll);
             debouncedHandleScroll.cancel();
-            window.removeEventListener("touchstart", handleTouchStart);
-            window.removeEventListener("touchmove", handleTouchMove);
+            // window.removeEventListener("touchstart", handleTouchStart);
+            // window.removeEventListener("touchmove", handleTouchMove);
             window.removeEventListener("keyup", handleKeyUp);
         };
-    }, [startX]);
+    }, []);
 
     const circleStyle = {
         transform: `rotate(${-66 + (marker - 1) * 33}deg)`,
     };
 
     return (
-        <>
+        <div {...handlers}>
+
             <div className="w-full flex   justify-center items-center tall:mt-[75vh] mt-[75vh] sm:mt-[100vh]">
                 <div className="absolute  m-0">
                     <div
-                        className={`z-[150] text-[2px] -mt-[17vw] -mt-[17vw]  w-[114vw] h-[114vw] sm:w-[60vw] sm:h-[60vw] sm:-ms-[9vw] sm:-mt-[9vw] tall:w-[114vw] tall:h-[114vw] tall:-mt-[17vw] tall:-ms-[17vw] wide:w-[117vh] wide:h-[117vh] wide:-mt-[17vh] wide:-ms-[17vh]   rounded-full absolute `}
+                        className={`z-[150] text-[2px] -mt-[17vw] -ms-[17vw]  w-[114vw] h-[114vw] sm:w-[60vw] sm:h-[60vw] sm:-ms-[9vw] sm:-mt-[9vw] tall:w-[114vw] tall:h-[114vw] tall:-mt-[17vw] tall:-ms-[17vw] wide:w-[117vh] wide:h-[117vh] wide:-mt-[17vh] wide:-ms-[17vh]   rounded-full absolute `}
                     >
                         <svg
                             viewBox="0 0 100 100"
@@ -183,7 +191,7 @@ const Circle = () => {
                     <Circle5 />
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 
