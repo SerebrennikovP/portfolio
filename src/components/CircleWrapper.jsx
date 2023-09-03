@@ -140,8 +140,8 @@ const Circle = () => {
                         style={circleStyle}
                     >
                         <div
-                            className={`w-2 h-2 md:w-3 md:h-3 2xl:w-5 2xl:h-5 ${marker >= 4 ? "bg-zinc-800" : "bg-zinc-200"
-                                }   rounded-full absolute top-[-4px] md:top-[-6px] 2xl:top-[-10px] left-1/2 transform translate-x-[-50%]`}
+                            className={`w-2 h-2 md:w-3 md:h-3 xxl:w-5 xxl:h-5 ${marker >= 4 ? "bg-zinc-800" : "bg-zinc-200"
+                                }   rounded-full absolute top-[-4px] md:top-[-6px] xxl:top-[-10px] left-1/2 transform translate-x-[-50%]`}
                         ></div>
                     </div>
                 </div>

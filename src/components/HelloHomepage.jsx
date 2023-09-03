@@ -40,7 +40,7 @@ const HelloHomepage = () => {
         <div
           className={` ${
             marker === 1 ? "-mt-[0vw] blur-none" : "-mt-[5vh] sm:-mt-[5vw] blur"
-          } transition-all ease-in-out duration-700 text-white flex flex-col justify-center text-5xl lg:text-8xl 2xl:text-[10rem] w-full sm:w-1/2  pb-4 sm:pb-0 h-full sm:pe-5 2xl:pe-10 font-['Open Sans'] font-medium `}
+          } transition-all ease-in-out duration-700 text-white flex flex-col justify-center text-5xl lg:text-8xl xxl:text-[10rem] w-full sm:w-1/2  pb-4 sm:pb-0 h-full sm:pe-5 xxl:pe-10 font-['Open Sans'] font-medium `}
           style={{
             textShadow: `${
               width + 16 > height * 2
@@ -54,10 +54,10 @@ const HelloHomepage = () => {
         <div
           className={` ${
             marker === 1 ? "-mt-[0vw] blur-none" : "mt-[10vh] sm:mt-[5vw] blur"
-          } transition-all ease-in-out duration-700 w-full  text-center sm:text-left sm:w-1/2 pt-4 sm:ps-5 2xl:ps-10 font-['Kanit'] border-l-0 border-t-4 sm:border-t-0 sm:border-l-4 `}
+          } transition-all ease-in-out duration-700 w-full  text-center sm:text-left sm:w-1/2 pt-4 sm:ps-5 xxl:ps-10 font-['Kanit'] border-l-0 border-t-4 sm:border-t-0 sm:border-l-4 `}
         >
           <div
-            className="text-white text-5xl lg:text-8xl 2xl:text-[10rem]"
+            className="text-white text-5xl lg:text-8xl xxl:text-[10rem]"
             style={{
               textShadow: `${
                 width + 16 > height * 2
@@ -67,12 +67,12 @@ const HelloHomepage = () => {
             }}
           >
             I'M PAVEL
-            <div className="text-white text-[1.7rem] lg:text-[3.4rem] 2xl:text-[5.6rem]">
+            <div className="text-white text-[1.7rem] lg:text-[3.4rem] xxl:text-[5.6rem]">
               SEREBRENNIKOV{" "}
             </div>
           </div>
           <div
-            className="text-orange-400 text-sm pt-2 sm:pt-0 sm:text-base lg:text-2xl 2xl:text-4xl 2xl:leading-[4rem]"
+            className="text-orange-400 text-sm pt-2 sm:pt-0 sm:text-base lg:text-xxl xxl:text-4xl xxl:leading-[4rem]"
             style={{
               textShadow: `${
                 width + 16 > height * 2

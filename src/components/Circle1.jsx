@@ -70,7 +70,7 @@ const Circle1 = () => {
             <div className="absolute  inset-0 opacity-[65%] text-[#F27405] flex break-all">
                 <p
                     style={{ textShadow: `0 0 1px #fff,  0 0 2px #000, 0 0 3px #000, 0 0 4px #000` }}
-                    className=" font-['Tektur'] text-xs sm:text-sm md:text-xl xl:text-2xl 2xl:text-3xl 3xl:text-4xl"
+                    className=" font-['Tektur'] text-xs sm:text-sm md:text-xl xl:text-xxl xxl:text-xxxl xxxl:text-4xl"
                 >
                     {matrixText}
                 </p>
