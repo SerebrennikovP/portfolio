@@ -7,7 +7,6 @@ import Circle3 from "./Circle3";
 import Circle4 from "./Circle4";
 import Circle5 from "./Circle5";
 import "../CSS/homepage.css";
-import { useSwipeable } from 'react-swipeable';
 
 const Circle = () => {
     const { marker, setMarker } = usePageContext();
@@ -23,13 +22,6 @@ const Circle = () => {
             prevMarker();
         }
     };
-
-    const handlers = useSwipeable({
-        onSwipedRight: () => nextMarker(),
-        onSwipedLeft:() => prevMarker(),
-        delta: 40, 
-        preventScrollOnSwipe: true,
-      });
 
     const debouncedHandleScroll = debounce(handleScroll, 300, {
         leading: true,
@@ -63,7 +55,7 @@ const Circle = () => {
     };
 
     return (
-        <div {...handlers} className="w-full absolute">
+        <div className="w-full absolute">
 
             <div className="w-full flex   justify-center items-center tall:mt-[75vh] mt-[75vh] sm:mt-[100vh]">
                 <div className="absolute  m-0">

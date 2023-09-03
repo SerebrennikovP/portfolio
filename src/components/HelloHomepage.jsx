@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { usePageContext } from "../context/PageContext";
 import { useResizeDetector } from "react-resize-detector";
+import TextTransition, { presets } from 'react-text-transition';
 
 const HelloHomepage = () => {
   const { marker, setMarker } = usePageContext();
@@ -24,7 +25,7 @@ const HelloHomepage = () => {
   useEffect(() => {
     const timeoutText = setTimeout(() => {
       setCount((prev) => (prev + 1) % 12);
-    }, 1000);
+    }, 2000);
     return () => clearTimeout(timeoutText);
   }, [count]);
 
@@ -33,22 +34,22 @@ const HelloHomepage = () => {
       ref={ref}
       className={`${
         marker === 1 ? "opacity-100" : "opacity-0"
-      } transition-all ease-in-out duration-700 flex flex-col mt-[5vh] sm:mt-0 sm:justify-center absolute h-[50vh] px-4 sm:px-2 bg-transparent z-10 w-full`}
+      } transition-all ease-in-out duration-700 flex flex-col mt-[10vh] sm:mt-0 sm:justify-center absolute h-[50vh] px-4 sm:px-2 bg-transparent z-[2] w-full`}
     >
       <div className="flex sm:flex-row flex-col">
         <div
           className={` ${
             marker === 1 ? "-mt-[0vw] blur-none" : "-mt-[5vh] sm:-mt-[5vw] blur"
-          } transition-all ease-in-out duration-700 text-white flex flex-col justify-center text-5xl lg:text-8xl 2xl:text-[10rem] w-full sm:w-1/2 text-center sm:text-right pb-4 sm:pe-5 2xl:pe-10 font-['Open Sans'] font-medium `}
+          } transition-all ease-in-out duration-700 text-white flex flex-col justify-center text-5xl lg:text-8xl 2xl:text-[10rem] w-full sm:w-1/2  pb-4 sm:pb-0 h-full sm:pe-5 2xl:pe-10 font-['Open Sans'] font-medium `}
           style={{
             textShadow: `${
               width + 16 > height * 2
-                ? "0 0 0.1vw #fff,  0 0 0.2vw #fff, 0 0 0.3vw #fff, 0 0 0.4vw #fff"
-                : "0 0 0.1vh #fff,  0 0 0.2vh #fff, 0 0 0.3vh #fff, 0 0 0.4vh #fff"
+                ? "0 0 0.15vw #fff,  0 0 0.3vw #fff, 0 0 0.45vw #fff, 0 0 0.6vw #fff"
+                : "0 0 0.15vh #fff,  0 0 0.3vh #fff, 0 0 0.45vh #fff, 0 0 0.6vh #fff"
             } `,
           }}
         >
-          {helloText[count]}
+            <TextTransition className="justify-center sm:justify-end " springConfig={presets.wobbly}>{helloText[count % 12]}</TextTransition>
         </div>
         <div
           className={` ${
@@ -60,8 +61,8 @@ const HelloHomepage = () => {
             style={{
               textShadow: `${
                 width + 16 > height * 2
-                  ? "0 0 0.1vw #fff,  0 0 0.2vw #fff, 0 0 0.3vw #fff"
-                  : "0 0 0.1vh #fff,  0 0 0.2vh #fff, 0 0 0.3vh #fff"
+                ? "0 0 0.15vw #fff,  0 0 0.3vw #fff, 0 0 0.45vw #fff"
+                : "0 0 0.15vh #fff,  0 0 0.3vh #fff, 0 0 0.45vh #fff"
               } `,
             }}
           >
