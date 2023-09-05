@@ -4,8 +4,7 @@
   -khtml-user-select: none; /* Konqueror */
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* Non-prefixed version, currently
-                                  not supported by any browser */
+  user-select: none; /* Non-prefixed version, currently not supported by any browser */
 }
 
 /* HELLO SECTION */
@@ -65,7 +64,7 @@
 }
 
 @media (pointer: coarse) {
-  .sc-eqUAAy {
+  .z-text {
     animation: rotateAnimation3dtext 16s ease-in-out infinite;
     transform-style: preserve-3d;
   }
@@ -96,6 +95,7 @@
 }
 .rotate-container:hover {
   filter: invert();
+  animation: rotateAnimation 5s infinite linear;
 }
 
 /* SKILLS SECTION */

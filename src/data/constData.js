@@ -33,3 +33,8 @@ export const Circle4Data = [
       "color": "hsl(91, 70%, 50%)"
     }
   ]
+
+  export const routes={
+    home:'/',
+    projects:'/projects'
+  }

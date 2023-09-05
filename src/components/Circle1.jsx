@@ -67,7 +67,7 @@ const Circle1 = () => {
                 className="absolute  inset-0 bg-cover bg-center"
                 style={{ backgroundImage: `url(${Circle1Image})` }}
             ></div>
-            <div className="absolute  inset-0 opacity-[65%] text-[#F27405] flex break-all">
+            <div className="absolute  inset-0 opacity-[65%] hover:text-green-600 text-[#F27405] flex break-all">
                 <p
                     style={{ textShadow: `0 0 1px #fff,  0 0 2px #000, 0 0 3px #000, 0 0 4px #000` }}
                     className=" font-['Tektur'] text-xs sm:text-sm md:text-xl xl:text-xxl xxl:text-xxxl xxxl:text-4xl"

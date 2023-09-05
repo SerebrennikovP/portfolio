@@ -13,20 +13,23 @@ const Circle = () => {
 
     const nextMarker = () => setMarker((prev) => Math.min(prev + 1, 5));
     const prevMarker = () => setMarker((prev) => Math.max(prev - 1, 1));
-
-    const handleScroll = (event) => {
-        if (event.deltaY > 0) {
-            nextMarker();
-        }
-        if (event.deltaY < 0) {
-            prevMarker();
-        }
-    };
-
-    const debouncedHandleScroll = debounce(handleScroll, 300, {
+    const debouncedNextMarker = debounce(nextMarker, 300, {
         leading: true,
         trailing: false,
     });
+    const debouncedPrevMarker = debounce(prevMarker, 50, {
+        leading: true,
+        trailing: false,
+    });
+    const handleScroll = (event) => {
+        if (event.deltaY > 50||event.deltaX < -50) {
+            debouncedNextMarker()
+        }
+        if (event.deltaY < -50 || event.deltaX >50) {
+            debouncedPrevMarker()
+        }
+    };
+
     const handleKeyUp = (event) => {
         if (event.key === "ArrowRight") {
             nextMarker();
@@ -36,16 +39,17 @@ const Circle = () => {
     };
 
     function createEmptySpaces(count) {
-        const spaces = '\u00A0'; // 
+        const spaces = '\u00A0';
         return spaces.repeat(count);
     }
 
     useEffect(() => {
-        window.addEventListener("wheel", debouncedHandleScroll);
+        window.addEventListener("wheel", handleScroll);
         window.addEventListener("keyup", handleKeyUp);
         return () => {
-            window.removeEventListener("wheel", debouncedHandleScroll);
-            debouncedHandleScroll.cancel();
+            window.removeEventListener("wheel", handleScroll);
+            debouncedPrevMarker.cancel();
+            debouncedNextMarker.cancel();
             window.removeEventListener("keyup", handleKeyUp);
         };
     }, []);
