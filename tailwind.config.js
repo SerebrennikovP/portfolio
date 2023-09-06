@@ -18,6 +18,7 @@ export default {
         xxxl:"2500px",
         wide:{ 'raw': '(min-aspect-ratio: 2.35)' },
         tall:{ 'raw': '(max-aspect-ratio: 0.75)' },
+        projectpage:{ 'raw': '(max-aspect-ratio: 1.25)' },
       },
     },
   },
