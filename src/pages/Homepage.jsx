@@ -11,8 +11,8 @@ import { useSwipeable } from 'react-swipeable';
 const Homepage = () => {
   const { marker, setMarker } = usePageContext();
   const handlers = useSwipeable({
-    onSwipedRight: () => setMarker((prev) => Math.min(prev + 1, 5)),
-    onSwipedLeft:() => setMarker((prev) => Math.max(prev - 1, 1)),
+    onSwipedRight: () =>setMarker((prev) => Math.max(prev - 1, 1)), 
+    onSwipedLeft:() => setMarker((prev) => Math.min(prev + 1, 5)),
     delta: 40, 
     preventScrollOnSwipe: true,
   });
