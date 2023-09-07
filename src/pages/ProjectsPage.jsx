@@ -21,6 +21,9 @@ import { PiRewindLight } from "react-icons/pi";
 import { PiFastForwardLight } from "react-icons/pi";
 import { useResizeDetector } from "react-resize-detector";
 import { BsFillPlayFill } from "react-icons/bs";
+import { IoHomeSharp } from "react-icons/io5";
+import { routes } from "../data/constData";
+import { NavLink } from "react-router-dom";
 
 const ProjectsPage = () => {
   const swiperRef = useRef(null);
@@ -41,13 +44,16 @@ const ProjectsPage = () => {
   ];
 
   useEffect(() => {
-    swiperRef.current.swiper.on("slideChange", () => {
-      const activeIndex = swiperRef.current.swiper.realIndex;
-      setActiveIndexName(projects[activeIndex].name);
-    });
-    return () => {
-      swiperRef.current.swiper.off("slideChange");
-    };
+    const swiper = swiperRef.current?.swiper;
+    if (swiper) {
+      swiper.on("slideChange", () => {
+        const activeIndex = swiper.realIndex;
+        setActiveIndexName(projects[activeIndex].name);
+      });
+      return () => {
+        swiper.off("slideChange");
+      };
+    }
   }, []);
 
   const nextProject = () => {
@@ -92,35 +98,50 @@ const ProjectsPage = () => {
     };
   }, []);
   return (
-    <div
-      ref={ref}
-      className="h-[100vh] flex flex-col  bg-black"
-    >
+    <div ref={ref} className="h-[100vh] flex flex-col  bg-black">
+      <NavLink to={routes.home}>
+        <div
+          className={`absolute z-50 opacity-50 hover:opacity-[90%] cursor-pointer p-[1vw] rounded-full bg-zinc-700 text-[2.5vw] lg:text-[1.5vw] projectpage:text-[5vw] m-[1vw] projectpage:m-[2vw] projectpage:p-[2vw] right-0 text-white`}
+        >
+          {" "}
+          <IoHomeSharp />
+        </div>
+      </NavLink>
+
       <div className="flex-1 projectpage:flex-none w-full flex flex-row projectpage:flex-col ">
         <div className="w-1/4  projectpage:w-full ps-[3vw] projectpage:ps-[8vw]">
           <div
-            className={` ${activeIndexName === "tesla"
-              ? "opacity-100 blur-none top-0"
-              : "opacity-0 blur-[0.2vw] top-[5vh]"
-              }  pt-[6vw] absolute z-10 image-website transition-all ease-in-out duration-1000
+            className={` ${
+              activeIndexName === "tesla"
+                ? "opacity-100 blur-none top-0"
+                : "opacity-0 blur-[0.2vw] top-[5vh]"
+            }  pt-[6vw] absolute z-10 image-website transition-all ease-in-out duration-1000
               projectpage:pt-[63vw]`}
           >
-            <img className="w-[33vw]  projectpage:w-[50vw]" src={TeslaFinder_name}></img>
+            <img
+              className="w-[33vw]  projectpage:w-[50vw]"
+              src={TeslaFinder_name}
+            ></img>
           </div>
           <p
-            className={` ${activeIndexName === "tesla"
-              ? "  top-0"
-              : "opacity-0 blur-[0.2vw] top-[-5vh]"
-              } text-white absolute z-10  w-1/3 pt-[14vw] text-[1vw] font-[Montserrat] transition-all ease-in-out duration-1000 image-website
+            className={` ${
+              activeIndexName === "tesla"
+                ? "  top-0"
+                : "opacity-0 blur-[0.2vw] top-[-5vh]"
+            } text-white absolute z-10  w-1/3 pt-[14vw] text-[1vw] font-[Montserrat] transition-all ease-in-out duration-1000 image-website
               projectpage:pt-[73vw]  projectpage:text-[3vw] projectpage:w-3/4`}
           >
-            With "TeslaFinder," a compelling web application that provides access to real-time Tesla inventory tracking and special discount notifications, set off on an adventurous journey. Experience the hunt for hidden Tesla jewels.
+            With "TeslaFinder," a compelling web application that provides
+            access to real-time Tesla inventory tracking and special discount
+            notifications, set off on an adventurous journey. Experience the
+            hunt for hidden Tesla jewels.
           </p>
           <h1
-            className={` ${activeIndexName === "zombie"
-              ? "opacity-100 blur-none top-0"
-              : "opacity-0 blur-[0.2vw] top-[5vh]"
-              } text-[3.5vw]  pt-[3vw] absolute z-10 text-[#BF1B1B] font-[FVRIOSA] image-website transition-all ease-in-out duration-1000 projectpage:pt-[60vw] projectpage:text-[5.5vw] projectpage:flex projectpage:flex-row`}
+            className={` ${
+              activeIndexName === "zombie"
+                ? "opacity-100 blur-none top-0"
+                : "opacity-0 blur-[0.2vw] top-[5vh]"
+            } text-[3.5vw]  pt-[3vw] absolute z-10 text-[#BF1B1B] font-[FVRIOSA] image-website transition-all ease-in-out duration-1000 projectpage:pt-[60vw] projectpage:text-[5.5vw] projectpage:flex projectpage:flex-row`}
           >
             <div className="">FRED VS</div>
             <div className="-mt-[0.5vw] projectpage:mt-[0vw]">
@@ -128,10 +149,11 @@ const ProjectsPage = () => {
             </div>
           </h1>
           <p
-            className={` ${activeIndexName === "zombie"
-              ? "  top-0"
-              : "opacity-0 blur-[0.2vw] top-[-5vh]"
-              } text-white absolute z-10  w-1/3 pt-[15vw] text-[1vw] font-[Montserrat] transition-all ease-in-out duration-1000 image-website  projectpage:pt-[73vw]  projectpage:text-[3vw] projectpage:w-3/4`}
+            className={` ${
+              activeIndexName === "zombie"
+                ? "  top-0"
+                : "opacity-0 blur-[0.2vw] top-[-5vh]"
+            } text-white absolute z-10  w-1/3 pt-[15vw] text-[1vw] font-[Montserrat] transition-all ease-in-out duration-1000 image-website  projectpage:pt-[73vw]  projectpage:text-[3vw] projectpage:w-3/4`}
           >
             In Pleasantville, a catastrophic experiment at a local lab unleashed
             a virus, turning cats into flesh-eating zombies. Fred, an animal
@@ -139,18 +161,20 @@ const ProjectsPage = () => {
             captures infected cats, using the hearts to heal them.
           </p>
           <h1
-            className={` ${activeIndexName === "solaris"
-              ? "opacity-100 blur-none top-0"
-              : "opacity-0 blur-[0.2vw] top-[5vh]"
-              } text-[7vw] pt-[4vw] absolute z-10 text-[#294be3] font-[Alien-Encounters-Regular] image-website transition-all ease-in-out duration-1000 projectpage:pt-[52vw] projectpage:text-[14vw]`}
+            className={` ${
+              activeIndexName === "solaris"
+                ? "opacity-100 blur-none top-0"
+                : "opacity-0 blur-[0.2vw] top-[5vh]"
+            } text-[7vw] pt-[4vw] absolute z-10 text-[#294be3] font-[Alien-Encounters-Regular] image-website transition-all ease-in-out duration-1000 projectpage:pt-[52vw] projectpage:text-[14vw]`}
           >
             SOLARIS
           </h1>
           <p
-            className={` ${activeIndexName === "solaris"
-              ? "  top-0"
-              : "opacity-0 blur-[0.2vw] top-[-5vh]"
-              } text-white absolute z-10  w-1/3 pt-[14vw] text-[1vw] font-[Montserrat] transition-all ease-in-out duration-1000 image-website  projectpage:pt-[73vw]  projectpage:text-[3vw] projectpage:w-3/4`}
+            className={` ${
+              activeIndexName === "solaris"
+                ? "  top-0"
+                : "opacity-0 blur-[0.2vw] top-[-5vh]"
+            } text-white absolute z-10  w-1/3 pt-[14vw] text-[1vw] font-[Montserrat] transition-all ease-in-out duration-1000 image-website  projectpage:pt-[73vw]  projectpage:text-[3vw] projectpage:w-3/4`}
           >
             Solaris, the champion of the ITC Smart Cities June 2023{" "}
             <strong>Hackathon</strong>, envisions a future where rooftops, aided
@@ -158,10 +182,11 @@ const ProjectsPage = () => {
             into eco-friendly havens while saving costs and the environment.
           </p>
           <h1
-            className={` ${activeIndexName === "paws"
-              ? "opacity-100 blur-none top-0"
-              : "opacity-0 blur-[0.2vw] top-[5vh]"
-              } text-[4vw] pt-[3vw] absolute z-10 text-[#f9eee2] font-[Unbounded] image-website transition-all ease-in-out duration-1000 projectpage:pt-[63vw] projectpage:text-[5.5vw] projectpage:flex projectpage:flex-row`}
+            className={` ${
+              activeIndexName === "paws"
+                ? "opacity-100 blur-none top-0"
+                : "opacity-0 blur-[0.2vw] top-[5vh]"
+            } text-[4vw] pt-[3vw] absolute z-10 text-[#f9eee2] font-[Unbounded] image-website transition-all ease-in-out duration-1000 projectpage:pt-[63vw] projectpage:text-[5.5vw] projectpage:flex projectpage:flex-row`}
           >
             <div className="">
               PAWS <span className="text-[#ffbdff] ">CAUSE</span>
@@ -169,10 +194,11 @@ const ProjectsPage = () => {
             <div className="-mt-[1.3vw] projectpage:mt-0 ">&nbsp;APPLAUSE</div>
           </h1>
           <p
-            className={` ${activeIndexName === "paws"
-              ? "  top-0"
-              : "opacity-0 blur-[0.2vw] top-[-5vh]"
-              } text-white absolute z-10  w-1/3 pt-[15vw] text-[1vw] font-[Montserrat] transition-all ease-in-out duration-1000 image-website  projectpage:pt-[73vw]  projectpage:text-[3vw] projectpage:w-3/4`}
+            className={` ${
+              activeIndexName === "paws"
+                ? "  top-0"
+                : "opacity-0 blur-[0.2vw] top-[-5vh]"
+            } text-white absolute z-10  w-1/3 pt-[15vw] text-[1vw] font-[Montserrat] transition-all ease-in-out duration-1000 image-website  projectpage:pt-[73vw]  projectpage:text-[3vw] projectpage:w-3/4`}
           >
             Paws Cause Applause is your portal to pet adoption. Discover and
             provide loving homes for furry friends in need. Join a compassionate
@@ -180,23 +206,32 @@ const ProjectsPage = () => {
             Connecting souls, changing lives.
           </p>
           <div
-            className={` ${activeIndexName === "portfolio"
-              ? "opacity-100 blur-none top-0"
-              : "opacity-0 blur-[0.2vw] top-[5vh]"
-              }  pt-[4vw] absolute z-10 image-website transition-all ease-in-out duration-1000 projectpage:pt-[53vw]`}
+            className={` ${
+              activeIndexName === "portfolio"
+                ? "opacity-100 blur-none top-0"
+                : "opacity-0 blur-[0.2vw] top-[5vh]"
+            }  pt-[4vw] absolute z-10 image-website transition-all ease-in-out duration-1000 projectpage:pt-[53vw]`}
           >
-            <img className="w-[26vw] projectpage:w-[45vw]" src={Portfolio_name}></img>
+            <img
+              className="w-[26vw] projectpage:w-[45vw]"
+              src={Portfolio_name}
+            ></img>
             <div className="-mt-[0.7vw] ms-[0.92vw] projectpage:ms-[1.7vw] text-white text-[1vw] projectpage:text-[1.6vw] font-[Montserrat] tracking-[0.63vw] projectpage:tracking-[1.2vw]">
               PAVEL SEREBRENNIKOV
             </div>
           </div>
           <p
-            className={` ${activeIndexName === "portfolio"
-              ? "  top-0"
-              : "opacity-0 blur-[0.2vw] top-[-5vh]"
-              } text-white absolute z-10  w-1/3 pt-[14vw] text-[1vw] font-[Montserrat] transition-all ease-in-out duration-1000 image-website  projectpage:pt-[73vw]  projectpage:text-[3vw] projectpage:w-[85%]`}
+            className={` ${
+              activeIndexName === "portfolio"
+                ? "  top-0"
+                : "opacity-0 blur-[0.2vw] top-[-5vh]"
+            } text-white absolute z-10  w-1/3 pt-[14vw] text-[1vw] font-[Montserrat] transition-all ease-in-out duration-1000 image-website  projectpage:pt-[73vw]  projectpage:text-[3vw] projectpage:w-[85%]`}
           >
-            What exactly do you understand about recursion? What would happen if you were about to view what you are currently watching? We might never know the complete truth, but we can learn more about what you're seeing right now or re-immerse ourselves in the location where you are right now.
+            What exactly do you understand about recursion? What would happen if
+            you were about to view what you are currently watching? We might
+            never know the complete truth, but we can learn more about what
+            you're seeing right now or re-immerse ourselves in the location
+            where you are right now.
           </p>
           <div className="flex flex-row pt-[24vw] projectpage:absolute projectpage:mt-[80vw] gap-[1vw] projectpage:gap-[3vw]  ">
             {activeIndexName !== "solaris" && (
@@ -228,38 +263,63 @@ const ProjectsPage = () => {
           <div className="max-h-[76vh] projectpage:max-h-[57vw] h-[42vw] projectpage:h-[67vh] image-website image-website-mask-bottom unselectable">
             <img
               src={TeslaFinder_website}
-              className={` ${activeIndexName === "tesla"
-                ? "opacity-100 blur-none top-0"
-                : "opacity-0 blur-[0.2vw] top-[-5vh]"
-                } projectpage:w-full w-[75vw] absolute  image-website-mask-left transition-all ease-in-out duration-1000`}
+              className={` ${
+                activeIndexName === "tesla"
+                  ? "opacity-100 blur-none top-0"
+                  : "opacity-0 blur-[0.2vw] top-[-5vh]"
+              } projectpage:w-full w-[75vw] absolute ${
+                width / height >= 1.25
+                  ? "image-website-mask-left"
+                  : "image-website-mask-right"
+              }  transition-all ease-in-out duration-1000`}
             ></img>
             <img
               src={ZombieCats_website}
-              className={`${activeIndexName === "zombie"
-                ? "opacity-100 blur-none top-0"
-                : "opacity-0 blur-[0.2vw] top-[-5vh]"
-                } projectpage:w-full w-[75vw] absolute  image-website-mask-left transition-all ease-in-out duration-1000`}
+              className={`${
+                activeIndexName === "zombie"
+                  ? "opacity-100 blur-none top-0"
+                  : "opacity-0 blur-[0.2vw] top-[-5vh]"
+              } projectpage:w-full w-[75vw] absolute  ${
+                width / height >= 1.25
+                  ? "image-website-mask-left"
+                  : "image-website-mask-right"
+              } transition-all ease-in-out duration-1000`}
             ></img>
             <img
               src={Solaris_website}
-              className={`${activeIndexName === "solaris"
-                ? "opacity-100 blur-none top-0"
-                : "opacity-0 blur-[0.2vw] top-[-5vh]"
-                } projectpage:w-full w-[75vw] absolute  image-website-mask-left transition-all ease-in-out duration-1000`}
+              className={`${
+                activeIndexName === "solaris"
+                  ? "opacity-100 blur-none top-0"
+                  : "opacity-0 blur-[0.2vw] top-[-5vh]"
+              } projectpage:w-full w-[75vw] absolute  ${
+                width / height >= 1.25
+                  ? "image-website-mask-left"
+                  : "image-website-mask-right"
+              } transition-all ease-in-out duration-1000`}
             ></img>
             <img
               src={PawsCauseApplause_website}
-              className={`${activeIndexName === "paws"
-                ? "opacity-100 blur-none top-0"
-                : "opacity-0 blur-[0.2vw] top-[-5vh]"
-                } projectpage:w-full w-[75vw] absolute  image-website-mask-left transition-all ease-in-out duration-1000`}
+              className={`${
+                activeIndexName === "paws"
+                  ? "opacity-100 blur-none top-0"
+                  : "opacity-0 blur-[0.2vw] top-[-5vh]"
+              } projectpage:w-full w-[75vw] absolute  ${
+                width / height >= 1.25
+                  ? "image-website-mask-left"
+                  : "image-website-mask-right"
+              } transition-all ease-in-out duration-1000`}
             ></img>
             <img
               src={Portfolio_website}
-              className={`${activeIndexName === "portfolio"
-                ? "opacity-100 blur-none top-0"
-                : "opacity-0 blur-[0.2vw] top-[-5vh]"
-                } projectpage:w-full w-[75vw] absolute  image-website-mask-left transition-all ease-in-out duration-1000`}
+              className={`${
+                activeIndexName === "portfolio"
+                  ? "opacity-100 blur-none top-0"
+                  : "opacity-0 blur-[0.2vw] top-[-5vh]"
+              } projectpage:w-full w-[75vw] absolute  ${
+                width / height >= 1.25
+                  ? "image-website-mask-left"
+                  : "image-website-mask-right"
+              } transition-all ease-in-out duration-1000`}
             ></img>
           </div>
         </div>

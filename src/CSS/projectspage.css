@@ -41,6 +41,13 @@
     margin-top: 0vh;
   }
 }
+.image-website-mask-right {
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) 60%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
 
 .image-website-mask-left {
   mask-image: linear-gradient(
