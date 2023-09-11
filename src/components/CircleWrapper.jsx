@@ -70,7 +70,7 @@ const Circle = () => {
                             viewBox="0 0 100 100"
                             width="100%"
                             height="100%"
-                            fill={marker >= 4 ? "#000" : "#fff"}
+                            fill={marker >= 3 ? "#000" : "#fff"}
                         >
                             <defs>
                                 <path
@@ -139,12 +139,12 @@ const Circle = () => {
                         </svg>
                     </div>
                     <div
-                        className={`tall:w-[80vw] tall:h-[80vw] w-[80vw] h-[80vw] sm:w-[42vw]  sm:h-[42vw] wide:h-[83vh] wide:w-[83vh] border-2 ${marker >= 4 ? "border-[#00000060]" : "border-[#ffffff40]"
+                        className={`tall:w-[80vw] tall:h-[80vw] w-[80vw] h-[80vw] sm:w-[42vw]  sm:h-[42vw] wide:h-[83vh] wide:w-[83vh] border-2 ${marker >= 3 ? "border-[#00000060]" : "border-[#ffffff40]"
                             } rounded-full relative transition-all ease-in-out duration-700`}
                         style={circleStyle}
                     >
                         <div
-                            className={`w-2 h-2 md:w-3 md:h-3 xxl:w-5 xxl:h-5 ${marker >= 4 ? "bg-zinc-800" : "bg-zinc-200"
+                            className={`w-2 h-2 md:w-3 md:h-3 xxl:w-5 xxl:h-5 ${marker >= 3 ? "bg-zinc-800" : "bg-zinc-200"
                                 }   rounded-full absolute top-[-4px] md:top-[-6px] xxl:top-[-10px] left-1/2 transform translate-x-[-50%]`}
                         ></div>
                     </div>
