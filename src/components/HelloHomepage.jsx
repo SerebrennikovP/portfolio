@@ -33,7 +33,7 @@ const HelloHomepage = () => {
     <div
       ref={ref}
       className={`${
-        marker === 1 ? "opacity-100" : "opacity-0"
+        marker === 1 ? "opacity-100" : "opacity-0 unselectable"
       } transition-all ease-in-out duration-700 flex flex-col mt-[10vh] sm:mt-0 sm:justify-center absolute h-[50vh] px-4 sm:px-2 bg-transparent z-[2] w-full`}
     >
       <div className="flex sm:flex-row flex-col">

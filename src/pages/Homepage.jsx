@@ -5,6 +5,7 @@ import { usePageContext } from "../context/PageContext";
 import bg_1 from "../video/bg_1.gif";
 import HelloHomepage from "../components/HelloHomepage"
 import AboutHomepage from "../components/AboutHomepage"
+import ContactHomepage from "../components/ContactHomepage"
 import ProjectsHomepage from "../components/ProjectsHomepage"
 import { useSwipeable } from 'react-swipeable';
 
@@ -28,6 +29,7 @@ const Homepage = () => {
     <HelloHomepage/>
     <AboutHomepage/>
     <ProjectsHomepage/>
+    <ContactHomepage/>
     <div
       className={`${marker === 1 ? "hello-section" : marker === 2 ? "about-section" : marker === 3 ? 'projects-section' : marker === 4 ? 'skills-section' : marker === 5 ? 'contact-section' : "bg-black"
         } w-[100vw] h-[100vh] overflow-clip relative transition  ease-in-out duration-700`}
