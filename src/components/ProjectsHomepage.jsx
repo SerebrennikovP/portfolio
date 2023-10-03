@@ -17,12 +17,12 @@ const ProjectsHomepage = () => {
         src={interior}
         className={`${
           marker === 3 ? "opacity-100  blur-none" : "opacity-0 blur"
-        } overflow-clip h-[100vh] object-cover  w-[100vw] projectpage-background unselectable transition-all ease-in-out duration-700   absolute z-[0]  `}
+        }  h-[100vh] object-cover  w-[100vw] projectpage-background unselectable transition-all ease-in-out duration-700   absolute z-[0]  `}
       ></img>
       <div
         className={`${
           marker === 3 ? "opacity-100  blur-none z-[260]" : "opacity-0 blur z-[0]"
-        } overflow-hidden unselectable transition-all ease-in-out duration-700    tall:h-[40vh] h-[50vh]  absolute  w-full `}
+        }   unselectable transition-all ease-in-out duration-700    tall:h-[40vh] h-[50vh]  absolute  w-full `}
       >
         <NavLink to={marker === 3 && routes.projects}>
           <div
@@ -55,6 +55,7 @@ const ProjectsHomepage = () => {
                   <FaPlayCircle />
                 </div>
                 WATCH PROJECTS
+                {/* {window.innerWidth}/{window.innerHeight} */}
               </span>
             </div>
             <div

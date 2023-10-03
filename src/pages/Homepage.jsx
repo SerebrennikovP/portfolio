@@ -14,15 +14,17 @@ const Homepage = () => {
   const handlers = useSwipeable({
     onSwipedRight: () =>setMarker((prev) => Math.max(prev - 1, 1)), 
     onSwipedLeft:() => setMarker((prev) => Math.min(prev + 1, 5)),
+    // onSwipedDown: () =>setMarker((prev) => Math.max(prev - 1, 1)), 
+    // onSwipedUp:() => setMarker((prev) => Math.min(prev + 1, 5)),
     delta: 40, 
     preventScrollOnSwipe: true,
   });
-  return (<div {...handlers} className="overflow-clip">
+  return (<div {...handlers} >
     <div
-      className={`${marker === 1 ? 'opacity-100' : 'opacity-0'} w-[100%] h-[100%] overflow-clip transition-all ease-in-out duration-700 absolute   blur-[3px]`}
+      className={`${marker === 1 ? 'opacity-100' : 'opacity-0'} h-[100vh] object-cover  w-[100vw]   transition-all ease-in-out duration-700 absolute   blur-[3px]`}
       style={{
         backgroundRepeat: 'no-repeat',
-        backgroundSize: '100vw 100vh',
+        backgroundSize: '100% 100%',
         backgroundImage: `url(${bg_1})`,
       }}>
     </div>
@@ -32,7 +34,7 @@ const Homepage = () => {
     <ContactHomepage/>
     <div
       className={`${marker === 1 ? "hello-section" : marker === 2 ? "about-section" : marker === 3 ? 'projects-section' : marker === 4 ? 'skills-section' : marker === 5 ? 'contact-section' : "bg-black"
-        } w-[100vw] h-[100vh] overflow-clip relative transition  ease-in-out duration-700`}
+        } w-[100vw] h-[100vh]  relative transition  ease-in-out duration-700`}
     >
       <CircleWrapper />
     </div></div>

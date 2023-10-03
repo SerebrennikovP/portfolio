@@ -11,7 +11,7 @@ const AboutHomepage = () => {
 
         <div ref={ref}
             className={`${marker === 2 ? "opacity-100 text-5xl tall:text-[8vh] sm:text-5xl lg:text-[6vw] z-[260]   wide:text-[13vh] blur-none" : " z-0 opacity-0 text-[0px] blur"
-                } overflow-hidden unselectable transition-all ease-in-out duration-400 flex flex-col mt-[20vh] sm:mt-[10vh] semilg:mt-[5vh] semilg:pt-[5vh] xxl:h-[47vh] absolute h-[29vh] tall:h-[25vh] semilg:h-[45vh]  px-4 sm:px-2 bg-transparent text-white text-center   w-full `}
+                }   unselectable transition-all ease-in-out duration-400 flex flex-col mt-[20vh] sm:mt-[10vh] semilg:mt-[5vh] semilg:pt-[5vh] xxl:h-[47vh] absolute h-[29vh] tall:h-[25vh] semilg:h-[45vh]  px-4 sm:px-2 bg-transparent text-white text-center   w-full `}
         >
             <span data-z data-z-event='pointer' data-z-layers="10" data-z-depth="1rem" data-z-perspective='500px' onClick={() => console.log('asdasdasdasd')} className=' hover:text-blue-500 transition-all ease-in-out duration-400'
                             style={{

@@ -20,7 +20,7 @@ const Circle2 = () => {
       );
   };
   return (
-    <div className={`${marker === 2 ? 'opacity-100 rotate-[0deg] ' : marker > 2 ? 'opacity-[1%]  rotate-[540deg]  ' : 'opacity-[1%]  rotate-[-540deg] '}  transition-all ease-in-out duration-700 tall:h-[71.5vw] tall:w-[71.5vw] h-[71.5vw] w-[71.5vw] sm:h-[38vw] sm:w-[38vw] wide:h-[74.5vh] wide:w-[74.5vh] rounded-full overflow-hidden relative`}
+    <div className={`${marker === 2 ? 'opacity-100 rotate-[0deg] ' : marker > 2 ? 'opacity-[1%]  rotate-[540deg]  ' : 'opacity-[1%]  rotate-[-540deg] '}  transition-all ease-in-out duration-700 tall:h-[71.5vw] tall:w-[71.5vw] h-[71.5vw] w-[71.5vw] sm:h-[38vw] sm:w-[38vw] wide:h-[74.5vh] wide:w-[74.5vh] rounded-full   relative`}
     style={{ clipPath: 'circle(50% at center)' }}
     >
         <Canvas>

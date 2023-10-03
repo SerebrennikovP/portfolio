@@ -17,7 +17,7 @@ const Circle3 = () => {
                 WebkitBackdropFilter: "blur(5px)",clipPath: 'circle(50% at center)'
             }}
         ></div>
-        <div className={`${marker === 3 ? 'opacity-100 rotate-[0deg] ' : marker > 3 ? 'opacity-[0%]  rotate-[540deg]  ' : 'opacity-[0%]  rotate-[-540deg] '} transition-all  ease-in-out duration-700 tall:h-[70vw] tall:w-[70vw] h-[70vw] w-[70vw]  sm:h-[37vw] sm:w-[37vw] wide:h-[73vh] wide:w-[73vh]   overflow-hidden relative `}
+        <div className={`${marker === 3 ? 'opacity-100 rotate-[0deg] ' : marker > 3 ? 'opacity-[0%]  rotate-[540deg]  ' : 'opacity-[0%]  rotate-[-540deg] '} transition-all  ease-in-out duration-700 tall:h-[70vw] tall:w-[70vw] h-[70vw] w-[70vw]  sm:h-[37vw] sm:w-[37vw] wide:h-[73vh] wide:w-[73vh]     relative `}
             style={{ clipPath: 'circle(50% at center)' }}
         >
             <div

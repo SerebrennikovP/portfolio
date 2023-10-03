@@ -59,7 +59,7 @@ const Circle = () => {
     };
 
     return (
-        <div className="w-full absolute">
+        <div className="w-full h-full overflow-hidden absolute">
 
             <div className="w-full flex   justify-center items-center  mt-[75vh] sm:mt-[100vh]">
                 <div className="absolute  m-0">

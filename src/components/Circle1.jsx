@@ -60,7 +60,7 @@ const Circle1 = () => {
 
 
     return (
-        <div onMouseOver={() => { setHover(true) }} onMouseLeave={() => { setHover(false) }} className={`${marker === 1 ? 'opacity-100 ' : 'opacity-0 display-none rotate-[540deg] transition-transform'}transition-all  ease-in-out duration-700 tall:h-[70vw] tall:w-[70vw] h-[70vw] w-[70vw] cursor-default sm:h-[37vw] sm:w-[37vw] wide:h-[73vh] wide:w-[73vh] rotate-[0deg] rounded-full overflow-hidden relative`}
+        <div onMouseOver={() => { setHover(true) }} onMouseLeave={() => { setHover(false) }} className={`${marker === 1 ? 'opacity-100 ' : 'opacity-0 display-none rotate-[540deg] transition-transform'}transition-all  ease-in-out duration-700 tall:h-[70vw] tall:w-[70vw] h-[70vw] w-[70vw] cursor-default sm:h-[37vw] sm:w-[37vw] wide:h-[73vh] wide:w-[73vh] rotate-[0deg] rounded-full  relative`}
         style={{ clipPath: 'circle(50% at center)' }}
         >
             <div
