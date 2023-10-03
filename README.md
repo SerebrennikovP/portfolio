@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+# My Portfolio Website - A Creative Endeavor
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
 
-## Available Scripts
+My portfolio website is a testament to my creative journey, showcasing my skills in ideation, design, UX/UI, development, logo creation, and coding. Every element on the site, from concept to execution, is my own work. It's a reflection of my commitment to originality and innovation in web development.
 
-In the project directory, you can run:
+## Website 
+https://serebrennikov.vercel.app
 
-### `npm start`
+## Key Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Full Ownership:** This portfolio website is a product of my complete ownership, from concept inception to design, user experience (UX) and user interface (UI) design, and finally, its development.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **No Templates:** Unlike many websites, I've not relied on ready-made templates. Every aspect of the site is a bespoke creation.
 
-### `npm test`
+- **Artificial Intelligence:** Some of the images on the website were generated using AI Stable Diffusion, adding a touch of cutting-edge technology to the visual experience.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Device Compatibility
 
-### `npm run build`
+The website has been meticulously designed to ensure maximum responsiveness, adapting seamlessly to various screen sizes and devices. However, please be aware that due to the incorporation of cutting-edge technologies, it may not display correctly on older devices. It is recommended to use relatively powerful and modern devices for optimal viewing. For the best experience and access to all features, it is highly recommended to view the desktop version of the website. Please note that some features may not be available on mobile devices.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Utilized Libraries and Technologies
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- @nivo/pie
+- @react-three/drei
+- @react-three/fiber
+- Tailwind CSS
+- Bootstrap
+- React Bootstrap
+- React Icons
+- React Router Dom
+- React Text Transition
+- Swiper
+- Web Vitals
+- lodash.debounce
+- @types/three
+- react-helmet
+- react-resize-detector
+- react-swipeable
+- swiper
+- react-text-transition
+- React and React DOM
+- web-vitals
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Project in Progress
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+It's important to note that the website is a work in progress. I will continue to add new content and features to enhance the user experience and showcase my evolving skills and projects.
