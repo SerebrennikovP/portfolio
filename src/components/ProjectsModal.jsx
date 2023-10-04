@@ -14,7 +14,7 @@ function ProjectsModal(props) {
             case "solaris":
                 return "SOLARIS";
             case "paws":
-                return "PawsCauseApplause";
+                return "Paws Cause Applause";
             case "portfolio":
                 return "Portfolio";
         }

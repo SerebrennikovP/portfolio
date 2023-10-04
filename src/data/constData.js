@@ -36,5 +36,7 @@ export const Circle4Data = [
 
   export const routes={
     home:'/',
-    projects:'/projects'
+    projects:'/projects',
+    skills:'/skills',
+    about:'/about'
   }

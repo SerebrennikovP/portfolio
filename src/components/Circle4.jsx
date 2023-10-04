@@ -17,7 +17,7 @@ const Circle4 = () => {
                 : marker < 4
                     ? "opacity-[0%]  rotate-[-540deg]  "
                     : "opacity-[0%]  rotate-[540deg] "
-                }transition-all ease-in-out duration-700 tall:h-[79vw] tall:w-[79vw] h-[79vw] w-[79vw] sm:h-[42vw] sm:w-[42vw] wide:h-[83vh] wide:w-[83vh]  rounded-full   relative `}
+                }transition-all ease-in-out duration-700 tall:h-[79vw] tall:w-[79vw] h-[79vw] w-[79vw] sm:h-[42vw] sm:w-[42vw] wide:h-[83vh] wide:w-[83vh] tall:text-[1.3vh] text-[1.3vw] wide:text-[2.3vh] rounded-full   relative `}
                 style={{ clipPath: 'circle(50% at center)' }}
         >
             <ResponsivePie

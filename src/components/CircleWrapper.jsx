@@ -61,7 +61,7 @@ const Circle = () => {
     return (
         <div className="w-full h-full overflow-hidden absolute">
 
-            <div className="w-full flex   justify-center items-center  mt-[75vh] sm:mt-[100vh]">
+            <div className="w-full flex   justify-center items-center  tall:mt-[75vh] mt-[100vh]">
                 <div className="absolute  m-0">
                     <div
                         className={`z-[150] text-[2px] -mt-[17vw] -ms-[17vw]  w-[114vw] h-[114vw] sm:w-[60vw] sm:h-[60vw] sm:-ms-[9vw] sm:-mt-[9vw] tall:w-[114vw] tall:h-[114vw] tall:-mt-[17vw] tall:-ms-[17vw] wide:w-[117vh] wide:h-[117vh] wide:-mt-[17vh] wide:-ms-[17vh]   rounded-full absolute `}
@@ -84,8 +84,9 @@ const Circle = () => {
                             </defs>
                             <text>
                                 <textPath href="#circle-menu" className="unselectable font-['Kanit']">
-                                    <tspan className="cursor-default">
-                                        {createEmptySpaces(27)}
+                                    <tspan className="cursor-default text-[55px]">
+                                        {/* {createEmptySpaces(27)} */}
+                                        &nbsp;
                                     </tspan>
                                     <tspan
                                         className={`cursor-pointer hover:opacity-100 transition-all ease-in-out duration-400 ${marker === 1 ? "opacity-100" : "opacity-50"
@@ -94,8 +95,9 @@ const Circle = () => {
                                     >
                                         HELLO
                                     </tspan>
-                                    <tspan className="cursor-default">
-                                        {createEmptySpaces(30)}
+                                    <tspan className="cursor-default text-[59px]">
+                                        {/* {createEmptySpaces(29)} */}
+                                        &nbsp;
                                     </tspan>
                                     <tspan
                                         className={`cursor-pointer hover:opacity-100 transition-all ease-in-out duration-400 ${marker === 2 ? "opacity-100" : "opacity-50"
@@ -104,8 +106,9 @@ const Circle = () => {
                                     >
                                         ABOUT ME
                                     </tspan>
-                                    <tspan className="cursor-default">
-                                        {createEmptySpaces(25)}
+                                    <tspan className="cursor-default text-[52px]">
+                                        {/* {createEmptySpaces(26)} */}
+                                        &nbsp;
                                     </tspan>
                                     <tspan
                                         className={`cursor-pointer hover:opacity-100 transition-all ease-in-out duration-400 ${marker === 3 ? "opacity-100" : "opacity-50"
@@ -114,8 +117,9 @@ const Circle = () => {
                                     >
                                         PROJECTS
                                     </tspan>
-                                    <tspan className="cursor-default">
-                                        {createEmptySpaces(31)}
+                                    <tspan className="cursor-default text-[59px]">
+                                        {/* {createEmptySpaces(30)} */}
+                                        &nbsp;
                                     </tspan>
                                     <tspan
                                         className={`cursor-pointer hover:opacity-100 transition-all ease-in-out duration-400 ${marker === 4 ? "opacity-100" : "opacity-50"
@@ -124,8 +128,9 @@ const Circle = () => {
                                     >
                                         SKILLS
                                     </tspan>
-                                    <tspan className="cursor-default">
-                                        {createEmptySpaces(30)}
+                                    <tspan className="cursor-default text-[62px]">
+                                        {/* {createEmptySpaces(29)} */}
+                                        &nbsp;
                                     </tspan>
                                     <tspan
                                         className={`cursor-pointer hover:opacity-100 transition-all ease-in-out duration-400 ${marker === 5 ? "opacity-100" : "opacity-50"

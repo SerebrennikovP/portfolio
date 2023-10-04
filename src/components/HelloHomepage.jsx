@@ -21,7 +21,6 @@ const HelloHomepage = () => {
     "こんにちは",
   ];
   const [count, setCount] = useState(0);
-
   useEffect(() => {
     const timeoutText = setTimeout(() => {
       setCount((prev) => (prev + 1) % 12);
