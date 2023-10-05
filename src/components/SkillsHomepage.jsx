@@ -13,7 +13,7 @@ const SkillsHomepage = () => {
         <NavLink to={marker === 4 && routes.skills}>
             <div ref={ref}
                 className={`${marker === 4 ? "opacity-100 z-[60] blur-none" : " z-0 opacity-0 text-[0px] blur"
-                    }   unselectable transition-all ease-in-out duration-700 flex flex-col  absolute h-[45vh] tall:h-[40vh]  p-4 sm:px-2 justify-center w-full `}
+                    }   unselectable transition-all ease-in-out duration-700 flex flex-col  absolute h-[45vh] tall:h-[40vh]  p-4 sm:px-2 justify-center w-full overflow-hidden `}
             >
                 <StockChart />
             </div>

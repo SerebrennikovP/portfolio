@@ -8,10 +8,10 @@
     border-radius:100%;
     opacity:0;
     border:5px solid white;
-    animation:anim 4s infinite linear;
+    animation:anim 4s  linear;
   }
   .loading-parent {
-    animation:anim2 2.5s linear;
+    animation:anim2 2.6s linear;
   }
   @keyframes anim2 {
     0% {

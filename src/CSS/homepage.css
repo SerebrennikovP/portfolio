@@ -107,7 +107,11 @@
   animation: rotateAnimation 20s infinite linear;
 }
 .rotate-container:hover {
-  filter: invert();
+  -webkit-filter: invert(100%);
+  -ms-filter: invert(100%);
+  -o-filter: invert(100%);
+  filter: invert(100%);
+  z-index: 99999999;
   animation: rotateAnimation 5s infinite linear;
 }
 

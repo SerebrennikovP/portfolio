@@ -138,26 +138,17 @@ function StockChart() {
       frames[i].data[0].y = y.slice(0, i + 1);
     }
 
-    const annotationStyle = {
-        fontFamily: "Nanum Myeongjo",
-        fontSize: width > 500 ? 0.04 * width : 0.085 * height,
-        color: "white",
-        cursor: "pointer",
-        textDecoration: "underline",
-      };
-
     let layout = {
       plot_bgcolor: "#f0f0f0",
       paper_bgcolor: "#f0f0f0",
       margin: {
-        r: 0,
+        r: 20,
         t: 0,
         b: 0,
         l: 20,
       },
       annotations: [
         {
-            onclick:()=>console.log('sdf'),
           showarrow: false,
           text: "FIND OUT MY SKILLS",
           font: {
@@ -178,14 +169,14 @@ function StockChart() {
           y: 0.2,
         },
       ],
-      width: 0.95 * window.innerWidth,
+      width:  window.innerWidth,
       xaxis: {
         color: "black",
         tickfont: { color: "black" },
         ticks: "inside",
         automargin: true,
         showgrid: false,
-        tickformat: '%d %b'
+        tickformat: width > 800 ? '%d %b' : '%b',
       },
       yaxis: {
         color: "black",
@@ -225,7 +216,7 @@ function StockChart() {
   return (
     <div
       ref={ref}
-      className="transition-all ease-in-out duration-400 flex justify-center h-full w-full"
+      className="transition-all ease-in-out duration-400  overflow-hidden h-full "
       id="myDiv"
     ></div>
   );
